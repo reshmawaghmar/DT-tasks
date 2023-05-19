@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-# Sample event data
+
 events = [
     {
         "id": 1,
@@ -17,7 +17,7 @@ events = [
         "rigor_rank": 5,
         "attendees": []
     }
-    # Add more events here...
+
 ]
 
 
@@ -40,8 +40,7 @@ def get_latest_events():
     limit = int(request.args.get('limit', 5))
     page = int(request.args.get('page', 1))
 
-    # Filter events by type (if needed)
-    # filtered_events = [e for e in events if e['type'] == event_type]
+
 
     # Paginate results
     start_index = (page - 1) * limit
